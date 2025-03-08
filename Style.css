@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.titulo {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    color: #D2FF3D;
+}
+body {
+    background-color: #6a3dff;
+    font-family: 'calibri';
+}
+.menu{
+    width: 600px;
+    margin: 0 auto;
+
+}
+header{
+    background-color: #3DFFCB;
+    width: 100%;
+    clear: both;
+    content: '';
+    display: table; 
+}
+.navegacion{
+    width: 120px;
+    height: 50px;
+    float: left;
+    padding: 8px;
+
+}
+nav {
+    float: right;
+
+}
+nav ul li {
+    list-style: none;
+    margin-left: 20px;
+    margin-right: 50px;
+    padding: 35px 0;
+    float: left;
+    position: relative;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+}
+nav ul li a::before{
+    width: 0%;
+    background: #444;
+    height: 5px;
+    top: 0;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: width 0.2s;
+}
+nav ul li a:hover::before{
+    width: 100%;
+
+}
+
+/*css de contactos*/
+
+.formulario{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 700px;
+    padding: 10px;
+
+}
+.conteiner{
+    max-width: 700px;
+    width: 100%;
+    padding: 25px 30px ;
+    border-radius: 5px;
+}
+.conteiner .title{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.conteiner form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 12px 0;
+
+}
+form .form-grupo{
+    margin-bottom: 15px;
+    width: calc(100%2-20px);
+
+}
+
+form samp{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+
+}
+
+.form-grupo input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    border-bottom-width: 2px;
+    transition: all 0.3 ease;
+}
+.form-grupo input:focus,
+.form-grupo input:valid{
+    border-color: skyblue;
+
+}
+form .botonc{
+    width: 100%;
+    height: 40px;
+    margin: 40px 0;
+    
+}
+
+form .botonc input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    cursor: pointer ;
+    background: linear-gradient(130deg, #FF3D71,#9B7CFF ) ;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+}
+form .botonc input:hover{
+    background: linear-gradient(130deg,#9B7CFF , #FF3D71) ;
+}
+@media(max-width: 584px){
+    .conteiner{
+        max-width: 100%;
+    }
+    form .form-grupo{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .conteiner form{
+        max-height: 400px;
+        overflow-y: scroll;
+    }
+    .conteiner form::-webkit-scrollbar{
+        width: 0;
+    }
+    form .botonc{
+        margin: 20px 0;
+    }
+}
+
+
+/* footer*/
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 40px; /* Asegura que el pie de página no se solape con el contenido */
+    position: relative; /* Cambiado de absolute a relative */
+    bottom: 0;
+}
+footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Asegura que el pie de página se alinee con el borde izquierdo */
+}
